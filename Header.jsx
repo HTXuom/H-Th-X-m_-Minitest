@@ -1,21 +1,11 @@
-import Header from "./components/Header";
-import Scores from "./components/Scores";
-import { JAVA_RESULTS } from "./data";
-import { PYTHON_RESULTS } from "./data";
-import { HTML_RESULTS } from "./data";
-import { ENGLISH_RESULTS } from "./data";
-function App() {
+import pnLogo from "../assets/pn-logo.png";
+export default function Header() {
     return (
         <>
-            <Header />
-            <main className="scores-container">
-                <Scores courseName="JAVA" sourceResults={JAVA_RESULTS} />
-                <Scores courseName="PYTHON" sourceResults={PYTHON_RESULTS} />
-                <Scores courseName="HTML" sourceResults={HTML_RESULTS} />
-                <Scores courseName="ENGLISH" sourceResults={ENGLISH_RESULTS} />
-            </main>
+            <header id="header">
+                <img src={pnLogo} alt="PN Logo" />
+                <h1>Students results for (fake batch name)</h1>
+            </header>
         </>
     );
 }
-
-export default App;
